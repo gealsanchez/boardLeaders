@@ -57,10 +57,10 @@ After you're finished please remove all the comments and instructions!
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [To Do List] <a name="about-project"></a>
+# 📖 [LeaderBoard] <a name="about-project"></a>
 
 
-**[To Do List]** This project stores the description of a task, the user can update and delete any task in the API based on its completion. To Do list: Easily add & remove tasks to a list. Built with HTML, CSS & JavaScript. Local Storage Handling.
+**[LeaderBoard]** Website displays scores submitted by different players. It also allows you to submit your score. All data is preserved thanks to the external Leaderboard API service.
 
 ## 🛠 Built With <a name="built-with"></a>
 - HTML, CSS & Javascript
