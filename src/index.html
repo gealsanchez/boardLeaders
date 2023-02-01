@@ -13,28 +13,29 @@
     <h1>LeaderBoard!</h1>
   </header>
   <div class="board">
-
-    <section class="scores">
+    <div class="left-side">
       <div class="score-head">
         <h2>Recent Scores</h2>
-        <button>Refresh</button>
+        <button id="reload">Refresh</button>
       </div>
-
-    </section>
+      <section class="scores">
+      </section>
+    </div>
 
     <section class="add-the-score">
 
       <h2>Add your score</h2>
 
       <form class="add-score">
-        <input placeholder="Your name">
-        <input placeholder="Your score">
+        <input id="name" placeholder="Your name" required>
+        <input id="score" placeholder="Your score" required>
         <div>
-          <button>Submit</button>
+          <button id="submit">Submit</button>
         </div>
       </form>
 
     </section>
+
   </div>
 </body>
 

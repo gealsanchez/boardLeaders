@@ -1,13 +1,14 @@
-@font-face {
-  font-family: 'MyFont';
-  src: url('./font/Roboto.ttf') format('truetype');
+@import url('https://fonts.googleapis.com/css2?family=Crete+Round:ital@0;1&family=Inter:wght@200;300;400;500;600;700&family=Poppins:wght@200;300;600;800&family=Roboto:wght@700&display=swap');
+
+body {
+  font-family: 'Poppins', serif;
 }
 
-.scores div:nth-child(odd) {
+.scores p:nth-child(odd) {
   background: rgb(215, 214, 214);
 }
 
-.scores div:nth-child(even) {
+.scores p:nth-child(even) {
   background: #fff;
 }
 

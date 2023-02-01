@@ -1,19 +1,34 @@
 import './style.css';
+import getData from './modules/getData.js';
+import scoreBoard from './modules/scoreBoard.js';
+import postData from './modules/postData.js';
 
-const table = [
-  { name: 'Rose', score: 85 },
-  { name: 'Maynard', score: 86 },
-  { name: 'James', score: 87 },
-  { name: 'Keenan', score: 88 },
-  { name: 'Tommy', score: 89 },
-  { name: 'Iomi', score: 90 },
-  { name: 'Jerry', score: 91 },
-];
+const form = document.querySelector('.add-score');
+const reload = document.querySelector('#reload');
 
-const showScores = document.querySelector('.scores');
+const showScore = async () => {
+  const data = await getData();
+  data.result.forEach((score) => {
+    scoreBoard(score.user, score.score);
+  });
+};
 
-table.forEach((score) => {
-  const divScore = document.createElement('div');
-  divScore.textContent = `${score.name}: ${score.score}`;
-  showScores.appendChild(divScore);
+showScore();
+
+form.addEventListener('submit', (event) => {
+  event.preventDefault();
+  const userName = document.getElementById('name');
+  const userScore = document.getElementById('score');
+  postData(userName.value, userScore.value);
+  scoreBoard(userName.value, userScore.value);
+  userName.value = '';
+  userScore.value = '';
+});
+
+reload.addEventListener('click', async () => {
+  document.querySelector('.scores').innerHTML = '';
+  const data = await getData();
+  data.result.forEach((score) => {
+    scoreBoard(score.user, score.score);
+  });
 });
