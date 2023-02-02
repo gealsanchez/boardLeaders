@@ -2,9 +2,16 @@ import './style.css';
 import getData from './modules/getData.js';
 import scoreBoard from './modules/scoreBoard.js';
 import postData from './modules/postData.js';
+import imgReload from './images/refresh.svg';
+
+const reloadDiv = document.querySelector('.score-head');
+const myReload = new Image();
+myReload.src = imgReload;
+myReload.className = 'reload';
+reloadDiv.appendChild(myReload);
 
 const form = document.querySelector('.add-score');
-const reload = document.querySelector('#reload');
+const reload = document.querySelector('.reload');
 
 const showScore = async () => {
   const data = await getData();

@@ -1,39 +1,88 @@
 @import url('https://fonts.googleapis.com/css2?family=Crete+Round:ital@0;1&family=Inter:wght@200;300;400;500;600;700&family=Poppins:wght@200;300;600;800&family=Roboto:wght@700&display=swap');
 
 body {
+  height: 90vh;
   font-family: 'Poppins', serif;
+  background: rgba(129, 175, 86, 0.5);
+  background-image: linear-gradient(rgba(106, 236, 30, 0.9), rgba(224, 221, 22, 0.9));
 }
 
-.scores p:nth-child(odd) {
+.scores {
+  margin-top: 5%;
+}
+
+.scores div:nth-child(odd) {
   background: rgb(215, 214, 214);
 }
 
-.scores p:nth-child(even) {
+.scores div:nth-child(even) {
   background: #fff;
 }
 
+.score-head span {
+  font-size: 25px;
+  font-weight: bolder;
+  margin-right: 1%;
+  white-space: nowrap;
+}
+
 header {
+  margin-top: 5%;
   display: flex;
   justify-content: center;
 }
 
-.score-head {
-  display: flex;
-  width: 120%;
+header h1 {
+  font-size: 50px;
+  font-weight: bold;
 }
 
-.score-head button {
-  height: 5%;
+.score-head {
+  display: flex;
+  padding: 5% 0%;
+}
+
+.score-head img {
   align-self: center;
-  margin-left: 10%;
+  height: 20px;
+  cursor: pointer;
 }
 
 .board {
   display: flex;
   justify-content: space-around;
+  padding: 5%;
 }
 
 .add-score {
   display: flex;
   flex-direction: column;
+}
+
+.left-side {
+  padding: 1%;
+  border-radius: 2%;
+  width: fit-content;
+  font-size: 20px;
+  background-image: linear-gradient(rgba(84, 196, 224, 0.473), rgba(8, 116, 74, 0.9));
+}
+
+input {
+  border-radius: 5%;
+}
+
+form input {
+  width: 65%;
+}
+
+.add-the-score {
+  padding-top: 3%;
+}
+
+#score {
+  margin-bottom: 3%;
+}
+
+#submit {
+  border-radius: 10%;
 }
